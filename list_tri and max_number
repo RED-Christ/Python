@@ -1,0 +1,20 @@
+largestNumber = 0
+L = [10,1,2,8,45,4,7,25]
+for i in range(len(L)):
+    if largestNumber < L[i]:
+        largestNumber = L[i]
+print(largestNumber)
+
+
+def tri_insertion(L):
+    N = len(L)
+    for n in range(1,N):
+        cle = L[n]
+        j = n-1
+        while j>=0 and L[j] > cle:
+            L[j+1] = L[j] # decalage
+            j = j-1
+        L[j+1] = cle
+    print(L)
+
+tri_insertion(L)
